@@ -1,0 +1,29 @@
+### Get items
+POST http://api.test/items
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {"id": 1},
+  {"id": 2},
+  {"id": 3},
+]
+
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+
+[]
+
+### Get item
+POST =~^http://api.test/items/\d+
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{"id": 1}
+
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+
+{}

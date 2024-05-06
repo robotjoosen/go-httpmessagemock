@@ -1,0 +1,179 @@
+{
+  "uuid": "fe2c8017-6b9d-49dd-a916-75474d3b02d5",
+  "lastMigration": 32,
+  "name": "Mockoon.example",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8080,
+  "hostname": "http://api.test",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "8003ddc1-4d2c-43b5-bf5a-05d0fe3013de",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "items",
+      "responses": [
+        {
+          "uuid": "6b89500c-32ca-4a16-b4fe-ae44cda1bc3d",
+          "body": "[\n  {\"id\": 1},\n  {\"id\": 2},\n  {\"id\": 3},\n]\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "43f95a4f-657c-451f-8b54-9fdcbe6783a4",
+          "body": "[]",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "a2fa7dbe-ef6a-47b5-bf04-0524a2ff82ac",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "item/:id",
+      "responses": [
+        {
+          "uuid": "754c9f29-a71c-4f18-a6f8-43a4ae5475fd",
+          "body": "{\"id\": 1}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "303cca27-7b62-43d3-a544-e95c3abefe93",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "8003ddc1-4d2c-43b5-bf5a-05d0fe3013de"
+    },
+    {
+      "type": "route",
+      "uuid": "a2fa7dbe-ef6a-47b5-bf04-0524a2ff82ac"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
